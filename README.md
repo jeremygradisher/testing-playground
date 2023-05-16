@@ -204,3 +204,16 @@ bin/rails test test/models
 bin/rails test:system
 ```
 
+## Integration testing
+```
+bin/rails test test/integration
+```
+
+26. added a Welcome page and a test for it:
+```
+bin/rails test test/integration
+```
+
+27. Left off here:https://guides.rubyonrails.org/testing.html#creating-articles-integration
+
+
