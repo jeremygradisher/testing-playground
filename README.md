@@ -155,4 +155,39 @@ test "should report error" do
 end
 ```
 
-21. 
+21. Run all tests:
+```
+bin/rails test
+or
+bin/rails test:system
+```
+
+22. You can also run a particular test method from the test case by providing the -n or --name flag and the test's method name.
+```
+bin/rails test test/models/article_test.rb -n test_the_truth
+```
+
+23. Run all tests in a single file:
+``` 
+bin/rails test test/models/article_test.rb
+```
+
+You can also run a test at a specific line by providing the line number.
+```
+$ bin/rails test test/models/article_test.rb:6 # run specific test and line
+```
+
+You can also run an entire directory of tests by providing the path to the directory.
+
+```
+bin/rails test test/controllers # run all tests from specific directory
+```
+
+
+24. The test runner also provides a lot of other features like failing fast, deferring test output at the end of the test run and so on. Check the documentation of the test runner as follows:
+
+```
+bin/rails test -h
+```
+
+Usage: rails test [options] [files or directories]
