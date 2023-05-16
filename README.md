@@ -26,4 +26,14 @@ cat package.json | grep bootstrap
 ```
 I am running: "bootstrap": "^5.2.3",
 
-7. 
+7. Saved it to Github:
+```
+git init
+git add -A
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/jeremygradisher/testing-playground.git
+git push -u origin main
+```
+
+8. 
