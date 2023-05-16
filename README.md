@@ -1,5 +1,7 @@
 # Testing Playground:
 
+Reference: https://guides.rubyonrails.org/testing.html
+
 1. Create the testing-playground:
 rails new testing-playground --css=bootstrap --javascript=esbuild --database=postgresql
 
@@ -36,4 +38,29 @@ git remote add origin https://github.com/jeremygradisher/testing-playground.git
 git push -u origin main
 ```
 
-8. 
+8. Genereate a model to test with:
+```
+bin/rails generate model Article title:string body:text
+```
+
+9. Run the migration:
+```
+bin/rails db:migrate
+```
+
+10. Open the rails console:
+```
+bin/rails console
+```
+
+11. Initialize a new Article:
+```
+article = Article.new(title: "Hello Rails", body: "I am on Rails!")
+```
+
+12. Save the Article:
+```
+article.save
+```
+
+13. 
