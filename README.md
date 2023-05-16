@@ -116,3 +116,43 @@ test "should not save article without title" do
   assert_not article.save, "Saved the article without a title"
 end
 ```
+
+16. add to article.rb and re-run the test:
+```
+class Article < ApplicationRecord
+    validates :title, presence: true
+end
+```
+
+17. Either of these will run it currently:
+```
+bin/rails test test/models/article_test.rb
+or
+bin/rails test test/models/article_test.rb:4
+```
+
+18. added to article_test.rb:
+```
+test "should report error" do
+  # some_undefined_variable is not defined elsewhere in the test case
+  some_undefined_variable
+  assert true
+end
+```
+
+19. Then run the test:
+```
+bin/rails test test/models/article_test.rb
+```
+
+20. fixed the error:
+```
+test "should report error" do
+  # some_undefined_variable is not defined elsewhere in the test case
+  assert_raises(NameError) do
+    some_undefined_variable
+  end
+end
+```
+
+21. 
