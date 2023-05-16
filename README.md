@@ -158,7 +158,7 @@ end
 21. Run all tests:
 ```
 bin/rails test
-or
+or run all system tests:
 bin/rails test:system
 ```
 
@@ -191,3 +191,16 @@ bin/rails test -h
 ```
 
 Usage: rails test [options] [files or directories]
+
+## Model Testing:
+```
+bin/rails test test/models/article_test.rb
+or
+bin/rails test test/models
+```
+
+## System Testing
+```
+bin/rails test:system
+```
+
