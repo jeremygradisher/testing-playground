@@ -284,6 +284,7 @@ When testing a Users model in a Ruby on Rails 7 application, you can include sev
 10. <strong>Integration Tests</strong>: Finally, write integration tests that cover scenarios involving multiple components of your application. For example, test user registration, login, and interaction with other models or controllers.
 
 Remember to use testing frameworks like RSpec or Minitest to write and run your tests effectively. Additionally, consider using fixtures, factories (e.g., FactoryBot), or mocking/stubbing frameworks (e.g., FactoryGirl) to set up test data and isolate dependencies when necessary.
+
 ---
 
 
