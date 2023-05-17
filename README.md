@@ -216,4 +216,19 @@ bin/rails test test/integration
 
 27. Left off here:https://guides.rubyonrails.org/testing.html#creating-articles-integration
 
+28. test creating a new article (test/integration/blog_flow_test.rb):
+```ruby
+test "can create an article" do
+  get "/articles/new"
+  assert_response :success
+
+  post "/articles",
+    params: { article: { title: "can create", body: "article successfully." } }
+  assert_response :redirect
+  follow_redirect!
+  assert_response :success
+  assert_select "p", "Title:\n  can create"
+end
+```
+
 
