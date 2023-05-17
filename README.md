@@ -231,4 +231,33 @@ test "can create an article" do
 end
 ```
 
+29. Run the test:
+``` 
+bin/rails test test/integration/blog_flow_test.rb
+or just run "can create an article":
+bin/rails test test/integration/blog_flow_test.rb -n "can create an article"
+or by the test definition line number:
+bin/rails test test/integration/blog_flow_test.rb:11
+```
+### Integration tests are a great place to experiment with all kinds of use cases for our applications.
+
+---
+
+## Functional Tests for Your Controllers
+When writing functional tests, you are testing how your actions handle the requests and the expected result or response, in some cases an HTML view.
+
+The easiest way to see functional tests in action is to generate a controller using the scaffold generator:
+```
+bin/rails generate scaffold_controller article title:string body:text
+```
+
+This will generate the controller code and tests for an Article resource. You can take a look at the file articles_controller_test.rb in the test/controllers directory.
+
+## Generate test scaffold:
+```
+bin/rails generate test_unit:scaffold article
+```
+
+
+
 

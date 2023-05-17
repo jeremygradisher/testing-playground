@@ -12,11 +12,13 @@ class BlogFlowTest < ActionDispatch::IntegrationTest
     get "/articles/new"
     assert_response :success
   
-    post "/articles",
-      params: { article: { title: "can create", body: "article successfully." } }
+    article = Article.create(title: "can create", body: "article successfully.")
+    assert article.persisted?
+
+    post "/articles", params: { article: { title: "can create", body: "article successfully." } }
     assert_response :redirect
     follow_redirect!
     assert_response :success
-    assert_select "p", "Title:\n  can create"
+    assert_select "p", "Article was successfully created."
   end
 end
