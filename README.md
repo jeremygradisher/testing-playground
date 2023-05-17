@@ -273,7 +273,7 @@ When testing a Users model in a Ruby on Rails 7 application, you can include sev
 
 5. <strong>Authorization Tests</strong>: If your application includes authorization logic to control access to certain resources or actions, write tests to ensure that only authorized users can perform the appropriate actions and unauthorized users are restricted.
 
-6. <strong>Callbacks Tests: If you have defined any callbacks in your User model, such as before_save or after_create, test that these callbacks are triggered at the right times and perform the desired actions.
+6. <strong>Callbacks Tests</strong>: If you have defined any callbacks in your User model, such as before_save or after_create, test that these callbacks are triggered at the right times and perform the desired actions.
 
 7. <strong>Security Tests</strong>: Include tests to ensure that sensitive user data, such as passwords, are stored securely. For example, you can test the password encryption and authentication methods.
 
