@@ -287,5 +287,9 @@ Remember to use testing frameworks like RSpec or Minitest to write and run your 
 
 ---
 
+```
+bin/rails test test
+```
+* will run all tests in the test directory
 
 
